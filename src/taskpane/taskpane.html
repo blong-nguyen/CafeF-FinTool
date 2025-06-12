@@ -1,0 +1,54 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CafeF FinTool</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="CafeF FinTool" />
+        <h1 class="ms-font-su">CafeF FinTool</h1>
+        <h2 class="ms-font-xl"> A Tool to Retrieve Historical Stock Prices from the CafeF Website </h2>
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <h2 class="input-title">Input</h2>
+        <div class="input-container" id="input-container">
+            <div class="input-group">
+                <label class="input-label" for="ticker">Stock Ticker:</label>
+                <input class="input-field" type="text" id="ticker" placeholder="e.g., HPG" />
+            </div>
+            <div class="input-group">
+                <label class="input-label" for="start-date">Start Date:</label>
+                <input class="input-field" type="date" id="start-date" />
+            </div>
+            <div class="input-group">
+                <label class="input-label" for="end-date">End Date:</label>
+                <input class="input-field" type="date" id="end-date" />
+            </div>
+        </div>        
+        <button class="fetch-data-button" id="fetch-data-button">Download Data</button>
+        <div id="status"></div>
+        <p><label id="item-subject"></label></p>
+    </main>
+</body>
+
+</html>
