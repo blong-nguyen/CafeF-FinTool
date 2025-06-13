@@ -73,7 +73,7 @@ async function insertDataToExcel (data, ticker, startDate, endDate, status) {
 
       // Insert into Excel
       const range = dataSheet.getRange("A2").getResizedRange(data.length - 1, data[0].length - 1);
-      dataSheet.getRange("A1").values = ticker + ": " + startDate + " - " + endDate;
+      dataSheet.getRange("A1").values = ticker.toUpperCase() + ": " + startDate + " - " + endDate;
       range.values = data;
       await context.sync();
 
