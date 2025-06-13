@@ -20,7 +20,7 @@
  .ms-welcome__header {
     padding: 20px;
     padding-bottom: 30px;
-    padding-top: 100px;
+    padding-top: 30px;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -78,6 +78,7 @@
 }
 
 .ms-font-su {
+    margin-top: 20px;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -92,7 +93,8 @@ b {
 }
 
 .input-title {
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     font-size: x-large;
 }
 
